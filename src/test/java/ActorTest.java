@@ -26,4 +26,10 @@ public class ActorTest {
     public void hasFirstName(){
         assertEquals("Robert", actor1.getFirstName());
     }
+
+    @Test
+    public void canSetFirstName(){
+        actor1.setFirstName("Roger");
+        assertEquals("Roger", actor1.getFirstName());
+    }
 }
