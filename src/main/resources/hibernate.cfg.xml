@@ -13,9 +13,9 @@
         <property name="show_sql">true</property>
 
         <mapping class = "models.Studio"/>
-        <!--<mapping class = "models."/>-->
-        <!--<mapping class = "models."/>-->
-        <!--<mapping class = "models."/>-->
-        <!--<mapping class = "models."/>-->
+        <mapping class = "models.Film"/>
+        <mapping class = "models.Employee"/>
+        <mapping class = "models.Director"/>
+        <mapping class = "models.Actor"/>
     </session-factory>
 </hibernate-configuration>
