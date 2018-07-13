@@ -41,13 +41,24 @@ public class FilmTest {
 
     @Test
     public void hasDirector(){
-        assertEquals(director1.getFirstName(), film1.getDirector().getFirstName() );
+        assertEquals(director1, film1.getDirector());
     }
 
     @Test
     public void canSetDirector(){
         film1.setDirector(director2);
         assertEquals(director2.getFirstName(), film1.getDirector().getFirstName());
+    }
+
+    @Test
+    public void hasStudio(){
+        assertEquals(studio1, film1.getStudio());
+    }
+
+    @Test
+    public void canSetStudio(){
+        film1.setStudio(studio2);
+        assertEquals(studio2, film1.getStudio());
     }
 
 
