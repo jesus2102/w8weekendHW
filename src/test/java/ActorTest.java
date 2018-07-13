@@ -34,7 +34,13 @@ public class ActorTest {
     }
 
     @Test
-    public void hasSecondName(){
+    public void hasLastName(){
         assertEquals("Downy", actor1.getLastName());
+    }
+
+    @Test
+    public void canSetLastName(){
+        actor1.setLastName("Johnson");
+        assertEquals("Johnson", actor1.getLastName());
     }
 }
