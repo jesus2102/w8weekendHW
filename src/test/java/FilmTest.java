@@ -6,10 +6,13 @@ import org.junit.Before;
 
 public class FilmTest {
 
-    Studio studio;
-    Film film;
-    Director director;
-    Actor actor;
+    Studio studio1;
+    Film film1;
+    Film film2;
+    Director director1;
+    Actor actor1;
+    Actor actor2;
+    Actor actor3;
 
     @Before
     public void before(){
@@ -22,6 +25,6 @@ public class FilmTest {
 
         Actor actor1 = new Actor("Robert", "Downy");
         Actor actor2 = new Actor("Scarlet", "Johansson");
-        Actor actor2 = new Actor("Peter", "Hill");
+        Actor actor3 = new Actor("Peter", "Hill");
     }
 }

@@ -8,15 +8,19 @@ public class StudioTest {
 
     Studio studio1;
 
-
-
     @Before
     public void before(){
-        Studio studio1 = new Studio("Walt Disney");
+        studio1 = new Studio("Walt Disney");
     }
 
     @Test
     public void hasName(){
         assertEquals("Walt Disney", studio1.getName());
+    }
+
+    @Test
+    public void canSetName(){
+        studio1.setName("MGM");
+        assertEquals("MGM", studio1.getName());
     }
 }
