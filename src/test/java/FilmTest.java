@@ -22,7 +22,7 @@ public class FilmTest {
         studio2 = new Studio("MGM");
 
         director1 = new Director("James", "Cameron");
-        director1 = new Director("Peter", "Jackson");
+        director2 = new Director("Peter", "Jackson");
 
         film1 = new Film("Avengers", studio1, director1);
         film2 = new Film("IronMan", studio1, director1);
@@ -42,6 +42,12 @@ public class FilmTest {
     @Test
     public void hasDirector(){
         assertEquals(director1.getFirstName(), film1.getDirector().getFirstName() );
+    }
+
+    @Test
+    public void canSetDirector(){
+        film1.setDirector(director2);
+        assertEquals(director2.getFirstName(), film1.getDirector().getFirstName());
     }
 
 
