@@ -1,8 +1,10 @@
-import models.Actor;
 import models.Director;
 import models.Film;
 import models.Studio;
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class FilmTest {
 
@@ -10,21 +12,20 @@ public class FilmTest {
     Film film1;
     Film film2;
     Director director1;
-    Actor actor1;
-    Actor actor2;
-    Actor actor3;
+
 
     @Before
     public void before(){
-        Studio studio1 = new Studio("Walt Disney");
+        studio1 = new Studio("Walt Disney");
 
-        Director director1 = new Director("James", "Cameron");
+        director1 = new Director("James", "Cameron");
 
-        Film film1 = new Film("Avengers", studio1, director1);
-        Film film2 = new Film("IronMan", studio1, director1);
+        film1 = new Film("Avengers", studio1, director1);
+        film2 = new Film("IronMan", studio1, director1);
+    }
 
-        Actor actor1 = new Actor("Robert", "Downy");
-        Actor actor2 = new Actor("Scarlet", "Johansson");
-        Actor actor3 = new Actor("Peter", "Hill");
+    @Test
+    public void hasTitle(){
+        assertEquals("Avengers", film1.getTitle());
     }
 }

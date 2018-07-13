@@ -32,6 +32,15 @@ public class Film {
         this.id = id;
     }
 
+    @Column(name = "title")
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     @Column(name = "studio")
     public Studio getStudio() {
         return studio;
