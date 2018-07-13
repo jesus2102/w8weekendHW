@@ -39,5 +39,10 @@ public class FilmTest {
         assertEquals("Avengers 2", film1.getTitle());
     }
 
+    @Test
+    public void hasDirector(){
+        assertEquals(director1.getFirstName(), film1.getDirector().getFirstName() );
+    }
+
 
 }
