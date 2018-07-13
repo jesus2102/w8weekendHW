@@ -5,6 +5,8 @@ import models.Director;
 import models.Film;
 import models.Studio;
 
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args){
@@ -30,5 +32,6 @@ public class Runner {
         DBHelper.save(actor1);
         DBHelper.save(actor2);
         DBHelper.save(actor3);
+
     }
 }

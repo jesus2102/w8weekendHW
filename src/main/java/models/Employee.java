@@ -11,7 +11,7 @@ public abstract class Employee {
     private int id;
     private String firstName;
     private String lastName;
-    private List<Film> films;
+
 
     public Employee(){}
 
@@ -49,12 +49,4 @@ public abstract class Employee {
         this.lastName = lastName;
     }
 
-    @Column(name = "films")
-    public List<Film> getFilms() {
-        return films;
-    }
-
-    public void setFilms(List<Film> films) {
-        this.films = films;
-    }
 }
