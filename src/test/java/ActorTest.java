@@ -1,7 +1,4 @@
 import models.Actor;
-import models.Director;
-import models.Film;
-import models.Studio;
 import org.junit.Before;
 import org.junit.Test;
 

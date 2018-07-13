@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Studios")
@@ -8,6 +9,7 @@ public class Studio {
 
     private int id;
     private String name;
+    private List<Film> films;
 
     public Studio(){}
 
@@ -33,5 +35,14 @@ public class Studio {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @OneToMany(mappedBy = "studio", fetch = FetchType.LAZY)
+    public List<Film> getFilms() {
+        return films;
+    }
+
+    public void setFilms(List<Film> films) {
+        this.films = films;
     }
 }

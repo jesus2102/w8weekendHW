@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,7 +12,7 @@ public class Film {
     private String title;
     private Studio studio;
     private Director director;
-    private List<Actor> actors;
+//    private List<Actor> actors;
 
     public Film(){}
 
@@ -41,7 +42,8 @@ public class Film {
         this.title = title;
     }
 
-    @Column(name = "studio")
+    @ManyToOne
+    @JoinColumn(name = "studio_id", nullable = false)
     public Studio getStudio() {
         return studio;
     }
@@ -59,12 +61,12 @@ public class Film {
         this.director = director;
     }
 
-    @Column(name = "actors")
-    public List<Actor> getActors() {
-        return actors;
-    }
-
-    public void setActors(List<Actor> actors) {
-        this.actors = actors;
-    }
+//    @Column(name = "actors")
+//    public List<Actor> getActors() {
+//        return actors;
+//    }
+//
+//    public void setActors(List<Actor> actors) {
+//        this.actors = actors;
+//    }
 }
