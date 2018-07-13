@@ -3,6 +3,9 @@ import models.Director;
 import models.Film;
 import models.Studio;
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ActorTest {
 
@@ -17,5 +20,10 @@ public class ActorTest {
         actor1 = new Actor("Robert", "Downy");
 //        actor2 = new Actor("Scarlet", "Johansson");
 //        actor3 = new Actor("Peter", "Hill");
+    }
+
+    @Test
+    public void hasFirstName(){
+        assertEquals("Robert", actor1.getFirstName());
     }
 }
