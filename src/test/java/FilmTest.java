@@ -1,5 +1,6 @@
 import models.Director;
 import models.Film;
+import models.Genre;
 import models.Studio;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,8 +25,8 @@ public class FilmTest {
         director1 = new Director("James", "Cameron");
         director2 = new Director("Peter", "Jackson");
 
-        film1 = new Film("Avengers", studio1, director1);
-        film2 = new Film("IronMan", studio1, director1);
+        film1 = new Film("Avengers", Genre.ACTION, studio1, director1);
+        film2 = new Film("IronMan", Genre.ACTION, studio1, director1);
     }
 
     @Test

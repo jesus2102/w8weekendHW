@@ -1,9 +1,6 @@
 package db;
 
-import models.Actor;
-import models.Director;
-import models.Film;
-import models.Studio;
+import models.*;
 
 import java.util.List;
 
@@ -21,8 +18,8 @@ public class Runner {
         DBHelper.save(director1);
         DBHelper.save(director2);
 
-        Film film1 = new Film("Avengers", studio1, director1);
-        Film film2 = new Film("IronMan", studio1, director2);
+        Film film1 = new Film("Avengers", Genre.ACTION, studio1, director1);
+        Film film2 = new Film("IronMan", Genre.ACTION, studio1, director2);
         DBHelper.save(film1);
         DBHelper.save(film2);
 

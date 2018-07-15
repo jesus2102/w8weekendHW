@@ -15,11 +15,13 @@ public class Film {
     private Studio studio;
     private Director director;
     private List<Actor> actors;
+    private Genre genre;
 
     public Film(){}
 
-    public Film(String title, Studio studio, Director director) {
+    public Film(String title, Genre genre, Studio studio, Director director) {
         this.title = title;
+        this.genre = genre;
         this.studio = studio;
         this.director = director;
         this.actors = new ArrayList<Actor>();
@@ -80,5 +82,13 @@ public class Film {
 
     public void addActor(Actor actor){
         this.actors.add(actor);
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
     }
 }
