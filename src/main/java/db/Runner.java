@@ -22,7 +22,7 @@ public class Runner {
         DBHelper.save(director2);
 
         Film film1 = new Film("Avengers", studio1, director1);
-        Film film2 = new Film("IronMan", studio1, director1);
+        Film film2 = new Film("IronMan", studio1, director2);
         DBHelper.save(film1);
         DBHelper.save(film2);
 
@@ -33,5 +33,7 @@ public class Runner {
         DBHelper.save(actor2);
         DBHelper.save(actor3);
 
+
+        DBFilm.addActorToFilm(actor1,film1);
     }
 }

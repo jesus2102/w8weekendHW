@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "director")
+@Table(name = "directors")
 public class Director extends Employee {
 
     private List<Film> films;
@@ -23,5 +23,9 @@ public class Director extends Employee {
 
     public void setFilms(List<Film> films) {
         this.films = films;
+    }
+
+    public void addFilm(Film film){
+        this.films.add(film);
     }
 }

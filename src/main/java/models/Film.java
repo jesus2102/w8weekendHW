@@ -22,6 +22,7 @@ public class Film {
         this.title = title;
         this.studio = studio;
         this.director = director;
+        this.actors = new ArrayList<Actor>();
     }
 
     @Id
@@ -75,5 +76,9 @@ public class Film {
 
     public void setActors(List<Actor> actors) {
         this.actors = actors;
+    }
+
+    public void addActor(Actor actor){
+        this.actors.add(actor);
     }
 }

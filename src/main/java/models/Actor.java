@@ -3,6 +3,7 @@ package models;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,6 +17,7 @@ public class Actor extends Employee{
 
     public Actor(String firstName, String lastName) {
         super(firstName, lastName);
+        this.films = new ArrayList<Film>();
     }
 
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
@@ -29,5 +31,9 @@ public class Actor extends Employee{
 
     public void setFilms(List<Film> films) {
         this.films = films;
+    }
+
+    public void addFilm(Film film) {
+        this.films.add(film);
     }
 }
