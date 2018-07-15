@@ -57,4 +57,8 @@ public class Studio {
         this.films = films;
     }
 
+    public void payActor(double amount){
+        this.budget = (this.budget -= amount);
+    }
+
 }

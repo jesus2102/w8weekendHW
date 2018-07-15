@@ -47,4 +47,8 @@ public class Actor extends Employee{
     public void setWallet(double wallet) {
         this.wallet = wallet;
     }
+
+    public void getPaid(double amount){
+        this.wallet = (this.wallet += amount);
+    }
 }

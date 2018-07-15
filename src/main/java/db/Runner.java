@@ -35,5 +35,9 @@ public class Runner {
 
 
         DBFilm.addActorToFilm(actor1,film1);
+
+        DBStudio.payActor(studio1, actor1, 500000.00);
+        DBHelper.find(Studio.class, studio1.getId());
+        DBHelper.find(Actor.class, actor1.getId());
     }
 }
