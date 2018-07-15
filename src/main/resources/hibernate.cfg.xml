@@ -17,5 +17,6 @@
         <mapping class = "models.Employee"/>
         <mapping class = "models.Director"/>
         <mapping class = "models.Actor"/>
+        <mapping class = "models.Genre"/>
     </session-factory>
 </hibernate-configuration>

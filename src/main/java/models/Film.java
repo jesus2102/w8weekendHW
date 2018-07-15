@@ -84,6 +84,8 @@ public class Film {
         this.actors.add(actor);
     }
 
+    @ManyToOne
+    @JoinColumn(name = "genre_id", nullable = false)
     public Genre getGenre() {
         return genre;
     }

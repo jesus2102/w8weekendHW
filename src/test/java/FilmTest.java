@@ -25,8 +25,10 @@ public class FilmTest {
         director1 = new Director("James", "Cameron");
         director2 = new Director("Peter", "Jackson");
 
-        film1 = new Film("Avengers", Genre.ACTION, studio1, director1);
-        film2 = new Film("IronMan", Genre.ACTION, studio1, director1);
+        Genre genre1 = new Genre("Action");
+
+        film1 = new Film("Avengers", genre1, studio1, director1);
+        film2 = new Film("IronMan", genre1, studio1, director1);
     }
 
     @Test

@@ -4,6 +4,8 @@ import models.*;
 
 import java.util.List;
 
+import static db.DBActor.getGenreMoviesFromActor;
+
 public class Runner {
 
     public static void main(String[] args){
@@ -18,8 +20,11 @@ public class Runner {
         DBHelper.save(director1);
         DBHelper.save(director2);
 
-        Film film1 = new Film("Avengers", Genre.ACTION, studio1, director1);
-        Film film2 = new Film("IronMan", Genre.ACTION, studio1, director2);
+        Genre genre1 = new Genre("Action");
+        DBHelper.save(genre1);
+
+        Film film1 = new Film("Avengers", genre1, studio1, director1);
+        Film film2 = new Film("IronMan", genre1, studio1, director2);
         DBHelper.save(film1);
         DBHelper.save(film2);
 
@@ -31,10 +36,13 @@ public class Runner {
         DBHelper.save(actor3);
 
 
+
         DBFilm.addActorToFilm(actor1,film1);
 
         DBStudio.payActor(studio1, actor1, 500000.00);
         DBHelper.find(Studio.class, studio1.getId());
         DBHelper.find(Actor.class, actor1.getId());
+
+        List<Film> actor1ActionFilms = DBActor.getGenreMoviesFromActor(genre1, actor1);
     }
 }
