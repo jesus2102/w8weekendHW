@@ -9,12 +9,14 @@ public class Studio {
 
     private int id;
     private String name;
+    private double budget;
     private List<Film> films;
 
     public Studio(){}
 
-    public Studio(String name){
+    public Studio(String name, double budget){
         this.name = name;
+        this.budget = budget;
     }
 
     @Id
@@ -37,6 +39,15 @@ public class Studio {
         this.name = name;
     }
 
+    @Column(name = "budget")
+    public double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(double budget) {
+        this.budget = budget;
+    }
+
     @OneToMany(mappedBy = "studio", fetch = FetchType.LAZY)
     public List<Film> getFilms() {
         return films;
@@ -45,4 +56,5 @@ public class Studio {
     public void setFilms(List<Film> films) {
         this.films = films;
     }
+
 }

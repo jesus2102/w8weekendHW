@@ -18,8 +18,8 @@ public class FilmTest {
 
     @Before
     public void before(){
-        studio1 = new Studio("Walt Disney");
-        studio2 = new Studio("MGM");
+        studio1 = new Studio("Walt Disney", 12000000.00);
+        studio2 = new Studio("MGM", 600000.00);
 
         director1 = new Director("James", "Cameron");
         director2 = new Director("Peter", "Jackson");

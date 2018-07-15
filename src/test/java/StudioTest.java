@@ -10,7 +10,7 @@ public class StudioTest {
 
     @Before
     public void before(){
-        studio1 = new Studio("Walt Disney");
+        studio1 = new Studio("Walt Disney", 12000000.00);
     }
 
     @Test

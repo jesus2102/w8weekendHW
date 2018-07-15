@@ -10,6 +10,7 @@ import java.util.List;
 @Table(name = "actors")
 public class Actor extends Employee{
 
+    private double wallet;
     private List<Film> films;
 
     public Actor() {
@@ -17,6 +18,7 @@ public class Actor extends Employee{
 
     public Actor(String firstName, String lastName) {
         super(firstName, lastName);
+        this.wallet = wallet;
         this.films = new ArrayList<Film>();
     }
 
@@ -35,5 +37,14 @@ public class Actor extends Employee{
 
     public void addFilm(Film film) {
         this.films.add(film);
+    }
+
+    @Column(name = "wallet)")
+    public double getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(double wallet) {
+        this.wallet = wallet;
     }
 }

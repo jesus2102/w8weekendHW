@@ -11,8 +11,8 @@ public class Runner {
 
     public static void main(String[] args){
 
-        Studio studio1 = new Studio("Walt Disney");
-        Studio studio2 = new Studio("MGM");
+        Studio studio1 = new Studio("Walt Disney", 12000000.00);
+        Studio studio2 = new Studio("MGM", 600000.00);
         DBHelper.save(studio1);
         DBHelper.save(studio2);
 
